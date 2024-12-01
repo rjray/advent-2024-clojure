@@ -28,7 +28,21 @@ lein run -b DAY PART
 
 ## [day01.clj](day01.clj)
 
-Day 1 (--/--).
+Day 1 (7796/7184, 24:21).
+
+(Note: Started this pair at about 10 minutes past to opening of the puzzle. The
+time shown is an approximation based on that.)
+
+Both halves of this first day were well-suited to Clojure. Part 1 was to
+compare to sorted lists of numbers and calculate the difference between each
+pair. These numbers (using `Math/abs` to keep them all positive) were then
+summed up with `reduce`.
+
+Part 2 was actually easier than part 1. It involved calculating a "similarity"
+score by taking each number in the first list and scaling it out by how often
+it occurs in the second list. The `frequencies` built-in did the hard work of
+setting up the table of counts for each member of the second list, then a `map`
+over the first list produced the "similarities".
 
 ## [day02.clj](day02.clj)
 
