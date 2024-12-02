@@ -46,7 +46,18 @@ over the first list produced the "similarities".
 
 ## [day02.clj](day02.clj)
 
-Day 2 (--/--).
+Day 2 (6283/6110, 34:54).
+
+Another slightly-late start, pulled up the puzzle after 5 minutes.
+
+Part 1 was *really* suited to Clojure, as determining the first condition on
+the list of numbers was a matter of using `apply` and `<=`/`>=`. The second
+condition was a little trickier, but `partition` and `every?` did the trick.
+
+Part 2 was harder, though. Where part 1 took about 13:17 to solve, getting part
+2 done was another 21:37. The problem was trying to get Clojure to drop an
+arbitrary n^th element from a list. Once that was working, the rest fell into
+place. The `drop-nth` function will probably get added to the utils.
 
 ## [day03.clj](day03.clj)
 

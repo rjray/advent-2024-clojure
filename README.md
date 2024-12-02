@@ -14,11 +14,11 @@ comment code after the fact, when I'm not racing the clock.
 
 ## Stats
 
-Number of answers correct on first submission: 2/2 (100%)
+Number of answers correct on first submission: 4/4 (100%)
 
-Highest finish for first half: 7796
+Highest finish for first half: 6283
 
-Highest finish for second half: 7184
+Highest finish for second half: 6110
 
 ## Usage
 
