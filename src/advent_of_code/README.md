@@ -61,7 +61,23 @@ place. The `drop-nth` function will probably get added to the utils.
 
 ## [day03.clj](day03.clj)
 
-Day 3 (--/--).
+Day 3 (3174/4105, 22:06).
+
+This was actually very easy, though something weird made part 2 take about 5
+minutes longer than it should have.
+
+Part 1 was to find all "`mul`" instructions, evaluate them, and sum the
+results. Finished in 8:08, much of which was wrestling with escaping characters
+in a Clojure regular expression literal.
+
+Part 2 introduced to "control" instructions that would toggle a Boolean state
+which in turn controlled whether a given `mul` should be evaluated or skipped.
+This should have taken less than 5 additional minutes, using `case`. But the
+`case` block kept evaluating the "default" arm even after matching one of the
+first two arms. I couldn't figure out why, so I just rewrote it with `cond` and
+it worked right the first try.
+
+Need to see what was wrong with the `case` block.
 
 ## [day04.clj](day04.clj)
 
