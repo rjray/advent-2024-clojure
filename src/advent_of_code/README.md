@@ -81,7 +81,20 @@ Need to see what was wrong with the `case` block.
 
 ## [day04.clj](day04.clj)
 
-Day 4 (--/--).
+Day 4 (6725/5818, 45:49).
+
+An interesting pair of puzzles. Both were "word search" puzzles in a field of
+letters.
+
+For part 1, you had to find all occurrences of `XMAS` in the field, in any of
+the eight directions, with overlapping allowed. My first pass at this got the
+wrong answer on the test data due to not looking to see if a given `X` led to
+more than one string. Fixed that and got it right.
+
+Part 2 was a little trickier, but only took an additional ~12 minutes from the
+initial 33 for part 1. Here, you had to find _an_ "X" made from two occurrences
+of `MAS` that shared the `A`. The algorithm was similar, and actually a little
+easier since a given `A` could only add 1 to the overall count.
 
 ## [day05.clj](day05.clj)
 
