@@ -98,7 +98,11 @@ easier since a given `A` could only add 1 to the overall count.
 
 ## [day05.clj](day05.clj)
 
-Day 5 (--/--).
+Day 5 (11943/9215, 1:24:45).
+
+This was way harder for me than it should have been. I flailed much too long.
+
+More later. Maybe.
 
 ## [day06.clj](day06.clj)
 
