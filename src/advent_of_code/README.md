@@ -120,6 +120,20 @@ first two attempts on the puzzle data were too high. The third try got it
 right, but clearly my method for detecting the cycle is sub-optimal. Will
 compare this to other Clojure solutions tomorrow.
 
+## [day06bis.clj](day06bis.clj)
+
+Day 6 revisited. After finishing part 2 last night, I realized that I could
+detect the cycles much faster by looking for the recurrence of a grid space
+being moved into by the same direction. This morning, I implemented it but it
+didn't initially work. After some fruitless debugging, I took a look at
+[this solution from Clojurians
+Slack](https://gitlab.com/maximoburrito/advent2024/-/blob/main/src/day06/main.clj).
+I found the problem with my code (this person had implemented the same approach
+I thought of, he just got it the first time around), and also found that I
+could optimize it tremendously by only considering the open grid-points that
+had been visited by the guard in part 1. This took the run-time of part 2 down
+from 205 seconds to 47.8 seconds.
+
 ## [day07.clj](day07.clj)
 
 Day 7 (--/--).
