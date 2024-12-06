@@ -106,7 +106,19 @@ More later. Maybe.
 
 ## [day06.clj](day06.clj)
 
-Day 6 (--/--).
+Day 6 (16863/10964, 3:28:40).
+
+Due to being out to dinner with friends, I started this one 2:16:00 late. So
+the time actually spent on it was roughly 1:12:40.
+
+Part 1 took only 14 minutes, and was a simple matter of tracking the guard's
+steps in a set object until the guard stepped off the field.
+
+Part 2 involved finding a cycle, and I did a poor job. Once I finally got the
+code to not be stuck in a loop and get the right answer for the test data, the
+first two attempts on the puzzle data were too high. The third try got it
+right, but clearly my method for detecting the cycle is sub-optimal. Will
+compare this to other Clojure solutions tomorrow.
 
 ## [day07.clj](day07.clj)
 
