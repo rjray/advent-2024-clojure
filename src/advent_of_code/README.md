@@ -28,10 +28,10 @@ lein run -b DAY PART
 
 ## [day01.clj](day01.clj)
 
-Day 1 (7796/7184, 24:21).
+Day 1 (7796/7184, 34:21).
 
 (Note: Started this pair at about 10 minutes past to opening of the puzzle. The
-time shown is an approximation based on that.)
+time shown is the AoC time, my time was about 24:00.)
 
 Both halves of this first day were well-suited to Clojure. Part 1 was to
 compare to sorted lists of numbers and calculate the difference between each
@@ -46,9 +46,10 @@ over the first list produced the "similarities".
 
 ## [day02.clj](day02.clj)
 
-Day 2 (6283/6110, 34:54).
+Day 2 (6283/6110, 39:54).
 
-Another slightly-late start, pulled up the puzzle after 5 minutes.
+Another slightly-late start, pulled up the puzzle after 5 minutes. My time was
+closer to 35:00.
 
 Part 1 was *really* suited to Clojure, as determining the first condition on
 the list of numbers was a matter of using `apply` and `<=`/`>=`. The second
@@ -160,6 +161,21 @@ answer took 107.9 seconds.
 I will revisit this tomorrow. I want to have just one set of
 `do-eval`/`evaluate` that takes the operators as a parameter. I might also look
 at evaluating lines in parallel to cut the run-time down.
+
+## [day07bis.clj](day07bis.clj)
+
+Revisit of day 7.
+
+Rewritten so that there is just one version each of the `evaluate` and
+`do-eval` functions. The only other functions are the runners (`part-1` and
+`part-2`) and the number-concatenation function. Originally it was called
+`int-concat`, but in this file I just called it `||` outright because Clojure
+can do that.
+
+There's no optimization in this (yet). The run-time for part 2 was about 7s
+faster than the original, because I corrected an oversight in the concatenation
+function (was using an `apply` that I didn't need). But the code went from 70
+lines to 46, a 34% reduction.
 
 ## [day08.clj](day08.clj)
 
