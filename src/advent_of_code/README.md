@@ -136,7 +136,30 @@ from 205 seconds to 47.8 seconds.
 
 ## [day07.clj](day07.clj)
 
-Day 7 (--/--).
+Day 7 (4644/4236, 34:10).
+
+This was another case of puzzles well-suited to Clojure. The goal was to
+evaluate a sequence of numbers with different possible combinations of infix
+operators, to see if the result matched a given value. Clojure's ability to
+throw around functions as data, specifically the functions `+` and `*`, made
+this pretty straightforward.
+
+Part 1 was just to find all the lines that checked out when having the choice
+of `+` and `*` for operators. A vector of these two, and the `selections`
+function from the combinatorics library generated all the possible permutations
+for a given total number of operators. An eval-like function to take these and
+calculate the value was easy to write. Answer came back in 2 seconds.
+
+Part 2 upped the ante by adding a third "operator": concatenation (referred to
+with `||`). This would concatenate two numbers into one, i.e., `[12 657]` would
+become `12657`. Writing the operator and adding it to the a new vector of
+operators was easy. I decided to replicate most of the support functions to
+assume three operators rather than trying to generalize everything. Getting the
+answer took 107.9 seconds.
+
+I will revisit this tomorrow. I want to have just one set of
+`do-eval`/`evaluate` that takes the operators as a parameter. I might also look
+at evaluating lines in parallel to cut the run-time down.
 
 ## [day08.clj](day08.clj)
 
