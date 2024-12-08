@@ -179,7 +179,20 @@ lines to 46, a 34% reduction.
 
 ## [day08.clj](day08.clj)
 
-Day 8 (--/--).
+Day 8 (6203/6206, 1:05:58).
+
+Got home from a hockey _right at the time_ the puzzle unlocked.
+
+This was a little challenging, mostly because I got the signs wrong the first
+time around on part 1. I had to do some pencil/paper work to figure that out.
+Once I had that, part 1 was done and correct (in 47:37).
+
+Part 2 was tricky in that I had been using a `for`-comprehension in part 1, but
+for this I needed to go as far in each slope-direction as I could until going
+out of bounds. I replaced the `for` with a `loop` construct that would exit
+when both directions were off the map. This had the bonus of reusing everything
+_else_ from part 1, so I only had to write one new function and slightly modify
+one other.
 
 ## [day09.clj](day09.clj)
 
