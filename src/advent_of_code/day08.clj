@@ -6,7 +6,8 @@
 (defn- to-map
   "Take the matrix `m` and create a frequency map"
   [m]
-  (dissoc (let [m' (into {} (for [y (range (count m)), x (range (count (first m)))]
+  (dissoc (let [m' (into {} (for [y (range (count m))
+                                  x (range (count (first m)))]
                               [[y x] (get-in m [y x])]))]
             (group-by last m')) \.))
 
