@@ -196,7 +196,23 @@ one other.
 
 ## [day09.clj](day09.clj)
 
-Day 9 (--/--).
+Day 9 (13877/28950, 15:19:48).
+
+Started at 10:52:00. Part 1 finished at 11:55:24. Stopped at 12:30AM.
+Restarted at about 8:30AM, but worked on it in 5-6 minute "rests" from the
+day-job. So part 1 took about 1:03:24, and part 2's total time is unknown.
+
+Part 1 was done very poorly, and required increasing the stack-size of the JVM
+process in order to complete. I will leave this in place, since this is the
+code that generated the submitted answer.
+
+Part 2 was brutal, mainly because the data representation for part 1 made it
+impossible to re-use anything. Looking at how others represented their data, I
+was able to re-do that part, and from there I eventually got it working.
+
+I'll revisit this and re-do part 1 using the representation logic from part 2,
+and see if I can get it to run faster. In this code, part 1 takes about 65-70
+seconds, but part 2 ran in 12.95.
 
 ## [day10.clj](day10.clj)
 

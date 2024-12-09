@@ -11,4 +11,5 @@
                  [org.clojure/data.priority-map "1.1.0"]]
   :plugins [[lein-kibit "0.1.6"]]
   :main advent-of-code.core
+  :jvm-opts ["-Xss8m"]
   :repl-options {:init-ns advent-of-code.core})
