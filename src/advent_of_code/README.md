@@ -216,7 +216,23 @@ seconds, but part 2 ran in 12.95.
 
 ## [day10.clj](day10.clj)
 
-Day 10 (--/--).
+Day 10 (8234/7774, 1:10:27).
+
+Started at 9:16:00.
+
+Part 1 took a little longer than a simple search problem should have, as I
+forgot to properly set up the instance of `PersistentQueue/EMPTY`. Once I fixed
+that, I was getting the wrong numbers for the test input. I finally figured out
+that I was counting a given `9` more than once, if there was more than one way
+to reach it from a given trailhead. I corrected that, and had the first part
+correct in (roughly) 49:51.
+
+Then came part 2, where you have to count all the distinct paths you can make
+from a given trailhead. Just as I was wondering how to approach this, I
+realized that the per-trailhead numbers for the test input were *exactly the
+ones I had gotten in error in part 1*. So, all I had to do was figure out a
+clean way to handle both cases without copy/pasting 80% of the part 1 code.
+Part 2 was done in an additional 4:36.
 
 ## [day11.clj](day11.clj)
 
