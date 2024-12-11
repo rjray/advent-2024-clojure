@@ -241,7 +241,33 @@ Part 2 was done in an additional 4:36.
 
 ## [day11.clj](day11.clj)
 
-Day 11 (--/--).
+Day 11 (5229/26916, 11:45:16).
+
+Started on time, stopped at 11:37:31. Resumed at 7:30:00 or so. Finished at
+8:45:16. Part 1 took 19:11, part 2 took... about 3:33:36 in total.
+
+Part 1 was easily brute-forced, just a `map` over existing stones to replace
+them with new ones, done `n` times, then a `count` on the final list.
+
+Part 2 was an embarrassment. I figured out that I just need to keep a count of
+each stone-number each cycle, and use those to create a new mapping of
+stone-number to count. But I kept getting wrong answers when compared to the
+test input or when comparing the new algorithm (run for 25 blinks) to the part
+1 answer. Initially, my part 2 numbers were too high (and the gap grew as
+iterations increased). I tried adjusting how the counts were incremented and
+ended up with answer that were too low.
+
+Debugging this was hard, since the size of the set of numbers grew relatively
+fast between iterations. At one point, I basically abandoned all the code (but
+not the algorithm) for part 2 and rewrote it. Now, I was still getting low
+answers but they were much closer than before. I *finally* managed to trace it
+to a case where a stone-number has an even number of digits, and the two split
+numbers are the same. In these cases, I would only count the new number once,
+not twice. Finally, I had the correct answer.
+
+Part 2 runs a lot faster than part 1 does, despite having 3x the iterations
+(284ms vs. 762ms). While it would be trivial to re-do part 1 using the part 2
+algorithm, I'm just sick of this puzzle.
 
 ## [day12.clj](day12.clj)
 
