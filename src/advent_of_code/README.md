@@ -214,6 +214,11 @@ I'll revisit this and re-do part 1 using the representation logic from part 2,
 and see if I can get it to run faster. In this code, part 1 takes about 65-70
 seconds, but part 2 ran in 12.95.
 
+## [day09.clj](day09.clj)
+
+Re-did part 1 using the logic from part 2, but it ran slower. Not every
+experiment works out.
+
 ## [day10.clj](day10.clj)
 
 Day 10 (8234/7774, 1:10:27).
