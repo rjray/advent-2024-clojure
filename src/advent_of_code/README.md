@@ -271,7 +271,21 @@ algorithm, I'm just sick of this puzzle.
 
 ## [day12.clj](day12.clj)
 
-Day 12 (--/--).
+Day 12 (7220/4210, 1:59:18).
+
+Started 4 minutes late due to band.
+
+Part 1 went OK on the test data but had an infinite loop on the puzzle data.
+Found that it was in the region-detection code and fixed it with an additional
+`set` value to track the seen elements separately from the elements being added
+to the region itself. It took just over 1:09:00 to finish, given the debugging
+needed. Run-time was 285.6ms.
+
+Part 2 was much harder. After reading some comments on reddit, I decided to go
+with an approach of "collapsing" sides/squares to see if they followed a
+straight line and qualified as a distinct side. Tested the hell out of this one
+because I wasn't at all confident in it. It passed all the test-data values, so
+I ran it on the puzzle data and got the right answer in 311.8ms.
 
 ## [day13.clj](day13.clj)
 
