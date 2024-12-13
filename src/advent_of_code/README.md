@@ -289,7 +289,21 @@ I ran it on the puzzle data and got the right answer in 311.8ms.
 
 ## [day13.clj](day13.clj)
 
-Day 13 (--/--).
+Day 13 (695/2907, 1:01:45).
+
+Part 1 was brute-forced, and landed me in the top 1000 for the first time in
+quite a while. It was just a nested a/b loop in a `for` comprehension, where
+the loop returned all costs of combinations of a/b that hit the mark, then
+applied `min` to that list.
+
+Part 2, as expected, upped the ante severely. The X/Y of every prize had a huge
+number added to it (10^13), and that was impossible to brute-force, even when I
+tried to utilize some modulo-math to reduce the search-space. Then I realized I
+was looking at a system of linear equations, and started googling for linear
+algebra solutions. I came across
+[Cramer's Rule](https://en.wikipedia.org/wiki/Cramer%27s_rule), and was able to
+code a solution in a little over 45 minutes (after part 1 took only 10:49). Of
+course, part 2 being the RIGHT way to do it, finishes much faster than part 1.
 
 ## [day14.clj](day14.clj)
 
