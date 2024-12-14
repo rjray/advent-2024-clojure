@@ -307,7 +307,20 @@ course, part 2 being the RIGHT way to do it, finishes much faster than part 1.
 
 ## [day14.clj](day14.clj)
 
-Day 14 (--/--).
+Day 14 (9141/7683, 3:14:41).
+
+Started at roughly 10:45:00, so this would have taken about 1:19:00 or so.
+
+Part 1 was simple modulo math, no big deal.
+
+Part 2 required recognizing when a formation occurred. I had no idea how to do
+this, so I turned to reddit. But before I could crib from anyone else's
+solution, I saw a rather impressive visualization of part 2 from someone. When
+I saw that the tree was framed by a border, I realized that I only needed to
+detect some number of contiguous occupied squares on a y-line. I picked 20 as
+an arbitrary number to look for. I got the correct answer first try. But I
+spent way too long chasing a `NullPointerException` error before I finally
+found it. I estimate I lost 20 minutes or so on the debugging, there.
 
 ## [day15.clj](day15.clj)
 
