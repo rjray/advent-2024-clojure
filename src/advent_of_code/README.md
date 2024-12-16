@@ -324,7 +324,22 @@ found it. I estimate I lost 20 minutes or so on the debugging, there.
 
 ## [day15.clj](day15.clj)
 
-Day 15 (--/--).
+Day 15 (7026/18252, 16:50:52).
+
+Started at 10:15:00 due to hockey game. Stopped at 1:00AM to sleep, resumed at
+9:25AM. Finished roughly 1:50:52.
+
+Part 1 went well-enough. Finished in just under 40 minutes.
+
+Part 2 was a nightmare for some reason. It ended up being incredibly long and
+complicated in terms of code, and in the end it didn't work. All the test sets
+got the correct answers, but not the actual puzzle data (my second wrong answer
+of the year). I had found the "last" bug by stepping through dumps of the field
+at each move, from the larger example, looking for the place where a move
+wasn't executed correctly. But I couldn't do that with the real data. By this
+time it was almost 1:00PM and I was tired of the puzzle. I found a rather
+clever approach that was a sort of search-space problem, written in Python, and
+adapted that. The source of that was: https://gist.github.com/lukemcguire/440899f3038b549315cfbcb7a4a79911
 
 ## [day16.clj](day16.clj)
 
