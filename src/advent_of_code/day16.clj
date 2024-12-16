@@ -39,7 +39,7 @@
       (cons fw moves))))
 
 (defn- bfs
-  "Do searching, returning all paths/cost between `start` and `end`"
+  "Do searching, returning shortest path-cost between `start` and `end`"
   [{:keys [maze start end]}]
   (let [queue (list [start :e () 0])]
     (loop [[node & queue] queue, seen #{}]
