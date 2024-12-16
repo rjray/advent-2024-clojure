@@ -343,7 +343,16 @@ adapted that. The source of that was: https://gist.github.com/lukemcguire/440899
 
 ## [day16.clj](day16.clj)
 
-Day 16 (--/--).
+Day 16 (4919/3332, 1:57:57).
+
+Another breadth-first search problem, hampered by my brains seeming
+unwillingness to remember how to do this. Part 1 took over 1.5 hours because of
+the bad brain, but part 2 only took an additional 26:20. Both solutions were
+slow as hell, though. Sometimes I feel like the only person who has performance
+problems with Clojure, probably because I run the solutions through `lein`.
+
+But at least I got through both parts of today without looking at anyone else's
+code or commentary.
 
 ## [day17.clj](day17.clj)
 
