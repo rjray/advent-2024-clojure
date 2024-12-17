@@ -356,7 +356,20 @@ code or commentary.
 
 ## [day17.clj](day17.clj)
 
-Day 17 (--/--).
+Day 17 (2923/9852, 12:45:17).
+
+Started on time, finished part 1 in 39:43. Part 2 twisted my brain (I'm not
+good at reverse-engineering asm code, nor am I good at reverse-engineering lots
+of bit-operations). I worked on it until 11:30 my time (2:30:00 into the
+puzzle) and went to sleep. A few hints from one of the people (Norman) on the
+AoC channel of the Clojure slack helped me figure out that part of my problem
+was looking at the wrong end of program data when comparing it to partial
+solutions. Since I resumed right at 9:00AM and finished at 9:45:17, the total
+actual working-time for part 2 would be around 2:15:34 or so.
+
+Oddly, my code threw a `StackOverflow` error on the test data. I took a chance
+running it on the puzzle data and then trying that answer. The risk paid off,
+but I'm curious why the smaller data-set caused some sort of recursion loop.
 
 ## [day18.clj](day18.clj)
 
