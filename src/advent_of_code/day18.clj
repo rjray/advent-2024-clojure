@@ -24,8 +24,6 @@
   [start end field]
   (let [queue (into clojure.lang.PersistentQueue/EMPTY [[start 0]])]
     (loop [queue queue, seen #{}]
-      ;;(dump field seen)
-      ;;(prn (count seen))
       (let [[p cost] (peek queue), queue (pop queue)]
         (cond
           (nil? p)  -1
