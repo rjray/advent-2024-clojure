@@ -373,7 +373,16 @@ but I'm curious why the smaller data-set caused some sort of recursion loop.
 
 ## [day18.clj](day18.clj)
 
-Day 18 (--/--).
+Day 18 (8495/8191, 3:02:09).
+
+Started at roughly 10:40PM (hockey game). Finished part 1 about 1:04:47, due
+mostly to a well-hidden bug in my BFS implementation.
+
+Part 2 was surprisingly easier than I was expecting. We were told to find the
+first of the remaining blocks that would completely block any route out of the
+field. CLojure's `reduce` worked wonders here, both progressively adding blocks
+to the field and iterating over the remaining "bytes". That solution came in
+just over 16 additional minutes. It's kind of brute-force-ish, but it worked.
 
 ## [day19.clj](day19.clj)
 
