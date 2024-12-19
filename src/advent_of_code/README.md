@@ -386,7 +386,10 @@ just over 16 additional minutes. It's kind of brute-force-ish, but it worked.
 
 ## [day19.clj](day19.clj)
 
-Day 19 (--/--).
+Day 19 (22345/19722, 17:40:19).
+
+Started about 8 minutes late. Gave up around 11:25PM without getting part 1
+done. Finally got things working after looking at some other solutions.
 
 ## [day20.clj](day20.clj)
 
