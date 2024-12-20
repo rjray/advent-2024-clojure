@@ -393,7 +393,21 @@ done. Finally got things working after looking at some other solutions.
 
 ## [day20.clj](day20.clj)
 
-Day 20 (--/--).
+Day 20 (5654/14281, 16:46:36).
+
+Part 1 finished in 2:14:41, stopped for the night at that point. Resumed at
+8:00AM, stopped again at 9:00 for work. Picked at it off and on, finished about
+1:46.
+
+Part 1 was horribly delayed by a series of really dumb errors on my part.
+
+Part 2 got messy when I tried to do BFS from each path-point to get possible
+"jumps". In the end, I studied
+https://github.com/zelark/AoC/blob/master/src/zelark/aoc_2024/day_20.clj and
+used a Manhattan Distance approach.
+
+I can probably re-write part 1 using part 2, and parameterize some of the
+hard-coded numbers. If I feel like it.
 
 ## [day21.clj](day21.clj)
 
