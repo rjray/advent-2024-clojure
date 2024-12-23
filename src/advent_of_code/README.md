@@ -415,11 +415,42 @@ Day 21 (--/--).
 
 ## [day22.clj](day22.clj)
 
-Day 22 (--/--).
+Day 22 (19123/17334, unknown).
+
+Continuing from the delays, I didn't even start day 22 until just a few hours
+before the 24h mark. Indeed, part 1 was finished at the 23:19:43 mark.
+
+This one was about monkeys. Monkeys and bananas. And bit-wise math operations.
+For part 1, you had to apply a PRNG algoritm to each monkey's starting (seed)
+number 2000 times, then sum all the results. The operations of the algorithm
+were expressed as mutliplication, division (dropping any remainder), and modulo
+arithmetic. All of these could be done as bit-wise operations, which were
+generally faster.
+
+Part 2 involved determining a 4-number sequence of price differentials that
+would yield the best results from each monkey. Only one sequence would be
+applied to all monkeys, so a running object/map was used as an ersatz
+"memoization" of totals for each diff. It took 7.6s to run, so it can probably
+be improved at some point.
 
 ## [day23.clj](day23.clj)
 
-Day 23 (--/--).
+Day 23 (4054/4082, 1:53:20).
+
+One of the rare days where I solve both parts back-to-back when the puzzle
+unlocks, yet my rank actually went down on part 2. Heh.
+
+The problem was to take a list of pairs of host names, representing network
+connections, and determine LANs (sub-groups) with full connectivity. Part 1 was
+to find all groups of three in which at least one of the names started with a
+"t". This took me 51:07, as I went down the wrong path on graph stuff before
+turning to set operations.
+
+Part 2 was a bit more difficult, as you had to find the largest fully-connected
+LAN. Here, I spent too much time trying to reuse code from part 1, before
+looking at some reddit solutions showed me that (in this case) I actually
+needed a graph algorithm. It took just over an hour total, 1:03:13, and I had
+both parts done.
 
 ## [day24.clj](day24.clj)
 
