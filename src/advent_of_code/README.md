@@ -411,7 +411,31 @@ hard-coded numbers. If I feel like it.
 
 ## [day21.clj](day21.clj)
 
-Day 21 (--/--).
+Day 21 (16217/12427, unknown).
+
+Due to a variety of issues, mostly around holiday preparation, I wasn't able to
+complete this day until late into the 23rd. On top of that, I was wholly unable
+to get anything beyond a brute-force algorithm put together (and it didn't even
+work). Even if I got it working, I was certain that part 2 would break it (and
+I was right).
+
+In the end, I chose use this as an exercise in adapting other languages. I took
+a Python solution [from
+here](https://github.com/mattbillenstein/aoc/blob/main/2024/21/p.py) and
+converted it to Clojure. It was an interesting lesson in traversing structures
+in a (semi-)functional way, as well as showing me that some of the things I
+thought would work didn't. For example, the declaration of `dist` on line 56
+needed to be memoized. But being recursive, I couldn't get it to directly
+memoize with the `memoize` keyword. So I declare it there as a normal function
+and just before I used it, I made a lexical binding for `dist` that was
+memoized. But it didn't take, and the calls were all to the non-memo'd one.
+Part 2 ran for almost 6 minutes before I accepted that there was something
+wrong. So line 69 re-defines the `dist` symbol to be a memoized version of the
+function. It works, but it also causes a "redefined-var" warning from the
+static analysis tool.
+
+I also need to formalize some of the most-common graph/grid functionality,
+preferably in a separte module from `utils.clj`.
 
 ## [day22.clj](day22.clj)
 
