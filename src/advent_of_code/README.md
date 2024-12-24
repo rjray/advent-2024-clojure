@@ -478,7 +478,42 @@ both parts done.
 
 ## [day24.clj](day24.clj)
 
-Day 24 (--/--).
+Day 24 (4464/8192, 16:57:36).
+
+Started this one on time and finished part 1 in 1:10:36. Upon seeing what part
+2 entailed, chose to sleep on it. Looking at solutions on reddit, it seemed a
+lot of people solved part 2 by feeding the "circuit" to a graph-generator and
+looking for the anomalies. I didn't want to do that, I prefer to think that all
+of the puzzles can be solved with code only (aside from the occasional OCR).
+After getting up this morning and looking at the conversation on the Clojure
+Slack, the answer seemed to come back to the wiring structure of a binary "full
+adder".
+
+I started to look at the overall topography of the circuit: There were 312
+total "wires", and 222 of them were outputs from logical ops. I also found that
+there were 46 "z" wires and 45 each of "x" and "y". Further, none of the x/y
+wires were output targets; all were inputs only, with initial values given.
+Take these 136 out of the 312, and you 176 wires left (also the result of
+subtracting the 46 "z" wires from the 222 outputs). This happens to be `(4 *
+44)`, which *should* be the number of logic gates used on a per-pair basis
+(give or take for the half-adder used on `x00`/`y00`, etc.).
+
+I worked out some rules based on this, but I got stuck. I ended up looking at
+the Python solution
+[here](https://github.com/p3rki3/AoC2024/blob/main/Day24_solution.py), as that
+person also solved without using a graph-generator. I found out that there were
+some corner-cases I hadn't considered and added them.
+
+Then came the moment of truth: none of the sample data for part 1 would produce
+a known result for part 2, and the examples given in part 2 were not based on
+adder circuits. So, I had an answer with eight components for the puzzle data
+but no way of knowing if there were any remaining bugs in my code. I submitted
+it and it was the right answer.
+
+Interestingly, part 2 did *not* require actually "running" the simulation as
+part 1 had. And it beat the hell out of trying to brute-force all the
+combinations of the 222 outputs taken 8 at a time (128,795,283,347,445)
+multipled by all permutations within each set of 8 (40,320).
 
 ## [day25.clj](day25.clj)
 
