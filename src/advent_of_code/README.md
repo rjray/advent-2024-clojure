@@ -517,4 +517,12 @@ multipled by all permutations within each set of 8 (40,320).
 
 ## [day25.clj](day25.clj)
 
-Day 25 (--/--).
+Day 25 (3657/2832, 36:16).
+
+As is usual, only one puzzle on this day. I should have finished it in 25 min
+at the most, but something I tried in the REPL somehow got confused (?) when I
+copied it to the actual code. As a result, I got the *inverse* set of matches
+from what I was supposed to. Third wrong answer of the year. I was using
+`some`, I switched to `every?` with a slightly different predicate, and got the
+right answer.
+
