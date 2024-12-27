@@ -38,10 +38,11 @@
        (map #(str/replace % "-" " "))
        (map parse-out-longs)))
 
-(defn manhattan
+(defn manhattan-dist
   "Calculate the Manhattan Distance between two points."
-  [[^long y1 ^long x1] [^long y2 ^long x2]]
-  (+ (abs (- y1 y2)) (abs (- x1 x2))))
+  [p1 p2]
+  (+ (abs (- (first p1) (first p2)))
+     (abs (- (last  p1) (last  p2)))))
 
 (defn first-duplicate
   "Find first element of collection that is a duplicate"
@@ -51,11 +52,6 @@
               (reduced elt)
               (assoc acc elt true)))
           {} coll))
-
-(defn drop-nth
-  "Drop the nth element from `l`"
-  [l n]
-  (concat (take n l) (drop (inc n) l)))
 
 ;; Like the core time macro, but rather than printing the elapsed time it
 ;; returns a list of (result, time). Returned value is in milliseconds.
