@@ -30,13 +30,13 @@ lein run -b DAY PART
 
 Day 1 (7796/7184, 34:21).
 
-(Note: Started this pair at about 10 minutes past to opening of the puzzle. The
+(Note: Started this pair at about 10 minutes past the opening of the puzzle. The
 time shown is the AoC time, my time was about 24:00.)
 
 Both halves of this first day were well-suited to Clojure. Part 1 was to
-compare to sorted lists of numbers and calculate the difference between each
-pair. These numbers (using `Math/abs` to keep them all positive) were then
-summed up with `reduce`.
+compare two sorted lists of numbers and calculate the difference between each
+pair. These numbers (using `abs` to keep them all positive) were then summed up
+with `reduce`.
 
 Part 2 was actually easier than part 1. It involved calculating a "similarity"
 score by taking each number in the first list and scaling it out by how often
@@ -52,13 +52,13 @@ Another slightly-late start, pulled up the puzzle after 5 minutes. My time was
 closer to 35:00.
 
 Part 1 was *really* suited to Clojure, as determining the first condition on
-the list of numbers was a matter of using `apply` and `<=`/`>=`. The second
+the list of numbers was a matter of using `apply` and `<`/`>`. The second
 condition was a little trickier, but `partition` and `every?` did the trick.
 
 Part 2 was harder, though. Where part 1 took about 13:17 to solve, getting part
 2 done was another 21:37. The problem was trying to get Clojure to drop an
-arbitrary n^th element from a list. Once that was working, the rest fell into
-place. The `drop-nth` function will probably get added to the utils.
+arbitrary n<sup>th</sup> element from a list. Once that was working, the rest
+fell into place. The `drop-nth` function will probably get added to the utils.
 
 ## [day03.clj](day03.clj)
 
@@ -71,7 +71,7 @@ Part 1 was to find all "`mul`" instructions, evaluate them, and sum the
 results. Finished in 8:08, much of which was wrestling with escaping characters
 in a Clojure regular expression literal.
 
-Part 2 introduced to "control" instructions that would toggle a Boolean state
+Part 2 introduced two "control" instructions that would toggle a Boolean state
 which in turn controlled whether a given `mul` should be evaluated or skipped.
 This should have taken less than 5 additional minutes, using `case`. But the
 `case` block kept evaluating the "default" arm even after matching one of the
@@ -181,7 +181,7 @@ lines to 46, a 34% reduction.
 
 Day 8 (6203/6206, 1:05:58).
 
-Got home from a hockey _right at the time_ the puzzle unlocked.
+Got home from a hockey game _right at the time_ the puzzle unlocked.
 
 This was a little challenging, mostly because I got the signs wrong the first
 time around on part 1. I had to do some pencil/paper work to figure that out.
@@ -339,7 +339,8 @@ at each move, from the larger example, looking for the place where a move
 wasn't executed correctly. But I couldn't do that with the real data. By this
 time it was almost 1:00PM and I was tired of the puzzle. I found a rather
 clever approach that was a sort of search-space problem, written in Python, and
-adapted that. The source of that was: https://gist.github.com/lukemcguire/440899f3038b549315cfbcb7a4a79911
+adapted that. The source of that was:
+https://gist.github.com/lukemcguire/440899f3038b549315cfbcb7a4a79911
 
 ## [day16.clj](day16.clj)
 
@@ -380,7 +381,7 @@ mostly to a well-hidden bug in my BFS implementation.
 
 Part 2 was surprisingly easier than I was expecting. We were told to find the
 first of the remaining blocks that would completely block any route out of the
-field. CLojure's `reduce` worked wonders here, both progressively adding blocks
+field. Clojure's `reduce` worked wonders here, both progressively adding blocks
 to the field and iterating over the remaining "bytes". That solution came in
 just over 16 additional minutes. It's kind of brute-force-ish, but it worked.
 
